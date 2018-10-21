@@ -1,13 +1,6 @@
-title : standard drnumLowSpeed 1.0;
-section : DrNUM-1.0/drnumLowSpeed/standard;
-binary : drnumLowSpeed;
-files:
-  preprocess.py;
-  control/main.dnc;
-=
-title : standard simpleFoam 1.5;
-section : openfoam-1.5/simpleFoam/standard;
-binary : simpleFoam;
+title : standard simpleFoam 2.1;
+section : openfoam-2.1/simpleFoam/standard;
+binary: simpleFoam;
 files :
   system/controlDict,
   0/U,
@@ -17,24 +10,11 @@ files :
   0/omega,
   constant/transportProperties,
   constant/RASProperties,
+  constant/turbulenceProperties,
   system/fvSchemes,
-  system/fvSolution;
-=
-title : standard rhoSimpleFoam 1.5;
-section : openfoam-1.5/rhoSimpleFoam/standard;
-binary : rhoSimpleFoam;
-files :
-  system/controlDict,
-  0/U,
-  0/p,
-  0/T,
-  0/k,
-  0/epsilon,
-  0/omega,
-  constant/thermophysicalProperties,
-  constant/RASProperties,
-  system/fvSchemes,
-  system/fvSolution;
+  system/fvSolution,
+  system/decomposeParDict,
+  machines;
 =
 title : standard simpleFoam 1.6.x;
 section : openfoam-1.6.x/simpleFoam/standard;
@@ -66,10 +46,10 @@ files :
   constant/RASProperties,
   system/fvSchemes,
   system/fvSolution;
-=
-title : standard simpleFoam 2.1;
-section : openfoam-2.1/simpleFoam/standard;
-binary: simpleFoam;
+=  
+title : standard simpleFoam 1.5;
+section : openfoam-1.5/simpleFoam/standard;
+binary : simpleFoam;
 files :
   system/controlDict,
   0/U,
@@ -79,8 +59,21 @@ files :
   0/omega,
   constant/transportProperties,
   constant/RASProperties,
-  constant/turbulenceProperties,
   system/fvSchemes,
-  system/fvSolution,
-  system/decomposeParDict,
-  machines;
+  system/fvSolution;
+=
+title : standard rhoSimpleFoam 1.5;
+section : openfoam-1.5/rhoSimpleFoam/standard;
+binary : rhoSimpleFoam;
+files :
+  system/controlDict,
+  0/U,
+  0/p,
+  0/T,
+  0/k,
+  0/epsilon,
+  0/omega,
+  constant/thermophysicalProperties,
+  constant/RASProperties,
+  system/fvSchemes,
+  system/fvSolution;
