@@ -34,9 +34,9 @@
 SurfaceAlgorithm::SurfaceAlgorithm()
 {
   EG_TYPENAME;
-  getSet("surface meshing", "maximal number of iterations",  5, m_NumMaxIter);
-  getSet("surface meshing", "number of smoothing steps"   ,  2, m_NumSmoothSteps);
-  getSet("surface meshing", "number of Delaunay sweeps"   ,  1, m_NumDelaunaySweeps);
+  getSet("Surface meshing", "maximal number of iterations",  5, m_NumMaxIter);
+  getSet("Surface meshing", "number of smoothing steps"   ,  2, m_NumSmoothSteps);
+  getSet("Surface meshing", "number of Delaunay sweeps"   ,  1, m_NumDelaunaySweeps);
   m_NodesPerQuarterCircle = 0;
   m_RespectFeatureEdgesForDeleteNodes = false;
   m_FeatureAngleForDeleteNodes = deg2rad(45);

@@ -35,8 +35,8 @@ using namespace GeometryTools;
 SurfaceOperation::SurfaceOperation() : Operation()
 {
   //default values for determining node types and for smoothing operations
-  getSet("surface meshing", "edge angle to determine fixed vertices", 180, m_EdgeAngle);
-  getSet("surface meshing", "feature angle", 180, m_FeatureAngle);
+  getSet("Surface meshing", "edge angle to determine fixed vertices", 180, m_EdgeAngle);
+  getSet("Surface meshing", "feature angle", 180, m_FeatureAngle);
   m_FeatureAngle = GeometryTools::deg2rad(m_FeatureAngle);
   m_EdgeAngle = GeometryTools::deg2rad(m_EdgeAngle);
 

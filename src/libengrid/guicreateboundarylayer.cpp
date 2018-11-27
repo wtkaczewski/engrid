@@ -35,8 +35,8 @@
 
 GuiCreateBoundaryLayer::GuiCreateBoundaryLayer()
 {
-  getSet("boundary layer", "number of smoothing iterations", 10, m_NumIterations);
-  getSet("boundary layer", "remove points", true, m_RemovePoints);
+  getSet("Boundary layer", "number of smoothing iterations", 10, m_NumIterations);
+  getSet("Boundary layer", "remove points", true, m_RemovePoints);
 
   connect(m_Ui.pushButton_SelectAll_BC, SIGNAL(clicked()), this, SLOT(SelectAll_BC()));
   connect(m_Ui.pushButton_ClearAll_BC, SIGNAL(clicked()), this, SLOT(ClearAll_BC()));
@@ -60,11 +60,11 @@ void GuiCreateBoundaryLayer::before()
   double hr, ha, b, ds = 1.5, fr = 0.8;
   int num_layers = 0;
   int num_hr, num_nr;
-  getSet("boundary layer", "relative height of boundary layer", 0.01, hr);
-  getSet("boundary layer", "absolute height of boundary layer", 1.0, ha);
-  getSet("boundary layer", "blending between absolute and relative", 0.0, b);
-  getSet("boundary layer", "number of layer height relax iterations",  5,  num_hr);
-  getSet("boundary layer", "number of normal vector relax iterations", 20, num_nr);
+  getSet("Boundary layer", "relative height of boundary layer", 0.01, hr);
+  getSet("Boundary layer", "absolute height of boundary layer", 1.0, ha);
+  getSet("Boundary layer", "blending between absolute and relative", 0.0, b);
+  getSet("Boundary layer", "number of layer height relax iterations",  5,  num_hr);
+  getSet("Boundary layer", "number of normal vector relax iterations", 20, num_nr);
   {
     QString blayer_txt = GuiMainWindow::pointer()->getXmlSection("blayer/global");
     QTextStream s(&blayer_txt);

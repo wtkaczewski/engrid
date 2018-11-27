@@ -31,7 +31,7 @@
 InsertPoints::InsertPoints() : SurfaceOperation()
 {
   setQuickSave(true);
-  getSet("surface meshing", "point insertion threshold", 1, m_Threshold);
+  getSet("Surface meshing", "point insertion threshold", 1, m_Threshold);
 }
 
 void InsertPoints::operate()

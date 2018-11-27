@@ -31,8 +31,8 @@ void GuiDivideBoundaryLayer::before()
   populateBoundaryCodes(m_Ui.listWidgetBC);
   populateVolumes(m_Ui.listWidgetVC);
 
-  getSet("boundary layer", "first critical angle",  180, m_CritAngle1);
-  getSet("boundary layer", "second critical angle", 270, m_CritAngle2);
+  getSet("Boundary layer", "first critical angle",  180, m_CritAngle1);
+  getSet("Boundary layer", "second critical angle", 270, m_CritAngle2);
 
   QString blayer_txt = GuiMainWindow::pointer()->getXmlSection("blayer/global");
   QTextStream s(&blayer_txt);

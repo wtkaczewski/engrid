@@ -34,8 +34,8 @@
 
 CreateBoundaryLayer::CreateBoundaryLayer()
 {
-  getSet("boundary layer", "number of smoothing iterations", 10, m_NumIterations);
-  getSet("boundary layer", "remove points", true, m_RemovePoints);
+  getSet("Boundary layer", "number of smoothing iterations", 10, m_NumIterations);
+  getSet("Boundary layer", "remove points", true, m_RemovePoints);
   m_AbsoluteHeight = 0.0;
   m_RelativeHeight = 1.0;
   m_Blending = 0.0;

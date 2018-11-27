@@ -36,15 +36,15 @@ GridSmoother::GridSmoother()
   m_DesiredStretching      = 1.2;
   m_FirstCall = true;
 
-  getSet("boundary layer", "number of smoothing sub-iterations",       5,     m_NumIterations);
-  getSet("boundary layer", "use strict prism checking",                false, m_StrictPrismChecking);
-  getSet("boundary layer", "number of normal vector relax iterations", 10,    m_NumNormalRelaxations);
-  getSet("boundary layer", "number of layer height relax iterations",  3,     m_NumHeightRelaxations);
-  getSet("boundary layer", "radar angle",                              45,    m_RadarAngle);
-  getSet("boundary layer", "maximal layer height in gaps",             0.2,   m_MaxHeightInGaps);
-  getSet("boundary layer", "relative face size (lower limit)",         0.5,   m_FaceSizeLowerLimit);
-  getSet("boundary layer", "relative face size (upper limit)",         2.0,   m_FaceSizeUpperLimit);
-  getSet("boundary layer", "angle between top and bottom face",        45.0,  m_FaceAngleLimit);
+  getSet("Boundary layer", "number of smoothing sub-iterations",       5,     m_NumIterations);
+  getSet("Boundary layer", "use strict prism checking",                false, m_StrictPrismChecking);
+  getSet("Boundary layer", "number of normal vector relax iterations", 10,    m_NumNormalRelaxations);
+  getSet("Boundary layer", "number of layer height relax iterations",  3,     m_NumHeightRelaxations);
+  getSet("Boundary layer", "radar angle",                              45,    m_RadarAngle);
+  getSet("Boundary layer", "maximal layer height in gaps",             0.2,   m_MaxHeightInGaps);
+  getSet("Boundary layer", "relative face size (lower limit)",         0.5,   m_FaceSizeLowerLimit);
+  getSet("Boundary layer", "relative face size (upper limit)",         2.0,   m_FaceSizeUpperLimit);
+  getSet("Boundary layer", "angle between top and bottom face",        45.0,  m_FaceAngleLimit);
 
   m_FaceAngleLimit = deg2rad(m_FaceAngleLimit);
 

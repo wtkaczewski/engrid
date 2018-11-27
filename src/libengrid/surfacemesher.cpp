@@ -30,10 +30,10 @@ SurfaceMesher::SurfaceMesher() : SurfaceAlgorithm()
 {
   EG_TYPENAME;
   m_PerformGeometricTests = true;
-  getSet("surface meshing", "use surface projection for smoothing", true,  m_UseProjectionForSmoothing);
-  getSet("surface meshing", "use normal correction for smoothing",  false, m_UseNormalCorrectionForSmoothing);
-  getSet("surface meshing", "allow feature edge swapping",          false, m_AllowFeatureEdgeSwapping);
-  getSet("surface meshing", "correct curvature",                    false, m_CorrectCurvature);
+  getSet("Surface meshing", "use surface projection for smoothing", true,  m_UseProjectionForSmoothing);
+  getSet("Surface meshing", "use normal correction for smoothing",  false, m_UseNormalCorrectionForSmoothing);
+  getSet("Surface meshing", "allow feature edge swapping",          false, m_AllowFeatureEdgeSwapping);
+  getSet("Surface meshing", "correct curvature",                    false, m_CorrectCurvature);
   m_EdgeAngle = m_FeatureAngle;
 }
 

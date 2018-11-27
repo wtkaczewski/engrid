@@ -38,8 +38,8 @@ SwapTriangles::SwapTriangles() : SurfaceOperation()
   m_SmallAreaSwap = false;
   m_SmallAreaRatio = 1e-3;
   m_Verbose = false;
-  getSet("surface meshing", "small area ratio for edge-swapping", 1e-3, m_SmallAreaRatio);
-  getSet("surface meshing", "threshold for surface errors", 10.0, m_SurfErrorThreshold);
+  getSet("Surface meshing", "small area ratio for edge-swapping", 1e-3, m_SmallAreaRatio);
+  getSet("Surface meshing", "threshold for surface errors", 10.0, m_SurfErrorThreshold);
 }
 
 bool SwapTriangles::testSwap(stencil_t S)
