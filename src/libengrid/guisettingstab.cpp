@@ -24,6 +24,7 @@
 #include <typeinfo>
 #include <QFormLayout>
 #include <QtDebug>
+#include <limits>
 
 #include <iostream>
 using namespace std;
@@ -44,6 +45,7 @@ GuiSettingsTab::GuiSettingsTab(QString org, QString app, QString group, QWidget 
     int I = settings.value(key).toInt();
     spinbox.append(new QSpinBox);
     spinbox_name.append(key);
+    spinbox.back()->setRange(0,numeric_limits<int>::max());
     spinbox.back()->setValue(I);
     permissionsLayout->addRow(key, spinbox.back());
   }

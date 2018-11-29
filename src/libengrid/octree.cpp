@@ -237,7 +237,8 @@ Octree::Octree()
   m_ToRefine.fill(false, 1);
   setBounds(vec3_t(0,0,0), vec3_t(1,1,1));
   setSmoothTransitionOn();
-  setMaxCells(1000000);
+  getSet("Surface meshing", "Max cells in octree", 1000000,     m_MaxCells);
+  setMaxCells(m_MaxCells);
 }
 
 void Octree::markToRefine(int cell)
