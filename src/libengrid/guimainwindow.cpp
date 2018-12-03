@@ -356,6 +356,15 @@ void GuiMainWindow::setupVtk()
   getRenderer()->AddActor(m_Axes);
   m_Axes->SetVisibility(0);
 
+  //coordinate axes
+  m_CoordinateAxes = vtkAxesActor::New();
+  m_CoordAxesWidget = vtkOrientationMarkerWidget::New();
+  m_CoordAxesWidget->SetOrientationMarker( m_CoordinateAxes );
+  m_CoordAxesWidget->SetInteractor( getInteractor() );
+  m_CoordAxesWidget->SetViewport( 0.0, 0.0 ,0.2,0.2);
+  m_CoordAxesWidget->SetEnabled( 1 );
+  m_CoordAxesWidget->InteractiveOff();
+
   // surface pipelines
   m_BackfaceProperty  = vtkProperty::New();
   m_SurfaceFilter     = vtkGeometryFilter::New();

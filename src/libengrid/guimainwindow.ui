@@ -1024,7 +1024,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>coordinate axes</string>
+    <string>bounding box axes</string>
    </property>
   </action>
   <action name="actionExportGmsh1Ascii">

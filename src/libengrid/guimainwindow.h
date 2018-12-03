@@ -60,6 +60,8 @@
 #include <vtkFollower.h>
 #include <vtkScalarBarActor.h>
 #include <vtkLookupTable.h>
+#include <vtkAxesActor.h>
+#include <vtkOrientationMarkerWidget.h>
 
 #include "ui_guimainwindow.h"
 #include "vtkEgBoundaryCodesFilter.h"
@@ -159,6 +161,10 @@ class CLASS_LIBENGRID_DLL GuiMainWindow : public QMainWindow, public EgVtkObject
     vtkActor*                 m_PickActor;    ///< VTK actor to display pick marker
     vtkSphereSource*          m_PickSphere;   ///< sphere to mark picked cell/points
     vtkCubeAxesActor2D*       m_Axes;         ///< VTK actor to display the coordinate system
+
+    vtkAxesActor* m_CoordinateAxes; /// coordinate axes
+    vtkOrientationMarkerWidget* m_CoordAxesWidget;
+
     vtkEgBoundaryCodesFilter* m_BCodesFilter; ///< VTK filter to extract boundary elements with certain codes
     vtkCellPicker*            m_CellPicker;   ///< VTK CellPicker to pick cells for various user interactions
     vtkPointPicker*           m_PointPicker;  ///< VTK PointPicker to pick points for various user interactions
